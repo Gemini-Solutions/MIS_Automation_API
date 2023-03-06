@@ -9,7 +9,7 @@
   "jewelEntryUrl": "https://apis.gemecosystem.com/enter-point",
   "reportLocation": "/tmp",
   "emailReport": "N",
-  "emailTO": "tushar.chauhan@geminisolutions.com",
+  "emailTO": "",
   "enamiCC": "",
   "beta": {
     "postApi": "Authenticate/Authenticate",

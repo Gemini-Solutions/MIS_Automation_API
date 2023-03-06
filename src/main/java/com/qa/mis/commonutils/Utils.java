@@ -19,11 +19,17 @@ public class Utils {
     public static String GetAuthorization() {
         return GlobalVariable.authorization;
     }
-    public static String GetUser(){
+
+    public static String GetUser() {
         return GlobalVariable.user;
     }
     public static String APIcalling(){
         String commonAPI="https://mymisapi.geminisolutions.com/api/";
+        return commonAPI;
+    }
+
+    public static String APIcalling() {
+        String commonAPI ="https://mymisapi.geminisolutions.com/api/";
         return commonAPI;
     }
 
@@ -43,9 +49,8 @@ public class Utils {
             }
 
             response = ApiInvocation.handleRequest(request);
-            if(response.getStatus()== HttpStatus.SC_OK)
-            {
-                GlobalVariable.token=response.getResponseBodyJson().getAsJsonObject().get("Token").getAsString();
+            if (response.getStatus() == HttpStatus.SC_OK) {
+                GlobalVariable.token = response.getResponseBodyJson().getAsJsonObject().get("Token").getAsString();
             }
 //            GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Executed Successfully", STATUS.PASS);
             GemTestReporter.addTestStep("Response Message", response.getResponseMessage(), STATUS.INFO);
