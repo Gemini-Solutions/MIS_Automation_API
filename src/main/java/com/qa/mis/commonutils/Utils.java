@@ -23,8 +23,9 @@ public class Utils {
     public static String GetUser() {
         return GlobalVariable.user;
     }
-    public static String APIcalling() {
-        String commonAPI = "https://mymisapi.geminisolutions.com/api/";
+
+    public static String APIcalling(){
+        String commonAPI="https://mymisapi.geminisolutions.com/api/";
         return commonAPI;
     }
 
