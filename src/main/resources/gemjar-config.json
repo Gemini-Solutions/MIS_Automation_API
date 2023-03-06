@@ -10,7 +10,7 @@
   "reportLocation": "/tmp",
   "emailReport": "N",
   "emailTO": "",
-  "enamiCC": "",
+  "emailCC": "",
   "beta": {
     "postApi": "Authenticate/Authenticate",
     "postFetchProject": "TimeSheet/FetchProjectsAssignedToUser",
