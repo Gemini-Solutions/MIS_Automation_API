@@ -10,7 +10,6 @@
   "reportLocation": "/tmp",
   "emailReport": "N",
   "emailTO": "",
-Beta
   "enamiCC": "",
   "beta": {
     "postApi": "Authenticate/Authenticate",
