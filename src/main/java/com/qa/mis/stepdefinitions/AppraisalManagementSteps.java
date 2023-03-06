@@ -10,7 +10,7 @@ public class AppraisalManagementSteps {
     int status;
 
     @Given("^Set endpoint and method \"(.*)\" and \"(.*)\"$")
-    public void Login(String url, String method) throws Exception {
+    public void login_AppraisalManagement(String url, String method) throws Exception {
         HashMap<String, String> token = new HashMap<String, String>();
         token.put("Authorization", Utils.GetAuthorization());
         status = Utils.LoginUser(url, method, token, "Successful Login").getStatus();
@@ -21,14 +21,14 @@ public class AppraisalManagementSteps {
         Utils.VerifyStatusCode(Expected, status);
     }
 
-    @Given("^Set endpoint and method \"(.+)\" and \"(.+)\" invalid Header$")
+    @Given("^Set endpoint and method \"(.+)\" and \"(.+)\" and invalid Header$")
     public void invalidLogin(String url, String method) throws Exception {
         HashMap<String, String> token = new HashMap<String, String>();
         token.put("Authentication", Utils.GetAuthorization());
         status = Utils.APIwithoutPayloads(url, method, token, "").getStatus();
     }
 
-    @Given("Fetch User endpoint and method {string} and {string}")
+    @Given("Set User endpoint and method {string} and {string}")
     public void fetchUserEndpointAndMethod(String url, String method) throws Exception {
         HashMap<String, String> token = new HashMap<String, String>();
         token.put("Token", Utils.GetToken());
@@ -36,13 +36,12 @@ public class AppraisalManagementSteps {
         status = Utils.APIwithoutPayloads(url, method, token, "User Details using ID").getStatus();
     }
 
-    @Given("Fetch project endpoint and method and sample {string} and {string} and {string}")
+    @Given("Set project endpoint and method and sample {string} and {string} and {string}")
     public void fetchProjectEndpointAndMethodAndSample(String url, String method, String sample) throws Exception {
         HashMap<String, String> token = new HashMap<String, String>();
         token.put("Token", Utils.GetToken());
         token.put("UserAbrhs", Utils.GetUser());
         status = Utils.APIwithPayloads(url, method, sample, token, "User Details using ID").getStatus();
     }
-
 }
 
