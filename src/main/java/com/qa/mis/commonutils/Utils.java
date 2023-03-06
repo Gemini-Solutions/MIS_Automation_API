@@ -22,12 +22,16 @@ public class Utils {
     public static String GetUser(){
         return GlobalVariable.user;
     }
+    public static String APIcalling(){
+        String commonAPI="https://mymisapi.geminisolutions.com/api/";
+        return commonAPI;
+    }
 
     public static Response LoginUser(String UrlNameFromConfig, String method, Map<String, String> headers, String step) throws Exception {
         Response response = new Response();
         try {
             Request request = new Request();
-            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            String url = APIcalling()+ProjectConfigData.getProperty(UrlNameFromConfig);
             GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
             request.setURL(url);
             request.setMethod(method);
@@ -61,7 +65,7 @@ public class Utils {
         Response response = new Response();
         try {
             Request request = new Request();
-            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            String url = APIcalling()+ProjectConfigData.getProperty(UrlNameFromConfig);
             GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
             request.setURL(url);
             request.setMethod(method);
@@ -99,7 +103,7 @@ public class Utils {
         Response response = new Response();
         try {
             Request request = new Request();
-            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            String url = APIcalling()+ProjectConfigData.getProperty(UrlNameFromConfig);
             GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
             request.setURL(url);
             request.setMethod(method);
