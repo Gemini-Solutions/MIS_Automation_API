@@ -28,6 +28,11 @@ public class Utils {
         return commonAPI;
     }
 
+    public static String APIcalling(){
+        String commonAPI="https://mymisapi.geminisolutions.com/api/";
+        return commonAPI;
+    }
+
     public static Response LoginUser(String UrlNameFromConfig, String method, Map<String, String> headers, String step) throws Exception {
         Response response = new Response();
         try {
