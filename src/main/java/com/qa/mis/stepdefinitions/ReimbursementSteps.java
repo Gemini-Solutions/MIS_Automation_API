@@ -1,4 +1,4 @@
-package stepdefinitions;
+package com.qa.mis.stepdefinitions;
 
 import com.qa.mis.commonutils.Utils;
 import io.cucumber.java.en.Given;
@@ -28,7 +28,7 @@ public class ReimbursementSteps {
     }
 
     @Then("^Verify Reimbursement status code (.*)$")
-    public void verifyReimbursementStatusCodeExpectedStatus(int Expected) {
+    public void verifyReimbursementstatuscode(int Expected) {
         Utils.VerifyStatusCode(Expected, status);
     }
 }

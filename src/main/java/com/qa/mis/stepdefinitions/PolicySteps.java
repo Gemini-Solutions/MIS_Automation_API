@@ -1,4 +1,4 @@
-package stepdefinitions;
+package com.qa.mis.stepdefinitions;
 
 import com.qa.mis.commonutils.Utils;
 import io.cucumber.java.en.Given;
@@ -15,7 +15,7 @@ public class PolicySteps {
         status = Utils.LoginUser(url, method,token,"Login User").getStatus();
     }
 
-    @Then("^Verify status code (.+)$")
+    @Then("^Verify Policy status code (.+)$")
     public void check_status_code(int Expected) {
         Utils.VerifyStatusCode(Expected, status);
     }

@@ -14,7 +14,7 @@ public class FormsSteps {
         status = Utils.LoginUser(url, method,token,"Successful Login").getStatus();
     }
 
-    @Then("Verify status code {int}")
+    @Then("Verify Forms status code {int}")
     public void check_status_code(int Expected) {
         Utils.VerifyStatusCode(Expected, status);
     }
