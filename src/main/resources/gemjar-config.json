@@ -69,6 +69,7 @@
     "GetDocumentByGroupId": "KnowledgeBase/GetDocumentByGroupId",
     "GetDocumentGroupsByParentId": "KnowledgeBase/GetDocumentGroupsByParentId",
     "GetAllDocumentTags": "KnowledgeBase/GetAllDocumentTags",
-    "GetSharedDocumentByToUser":"KnowledgeBase/GetSharedDocumentByToUser"
+    "GetSharedDocumentByToUser":"KnowledgeBase/GetSharedDocumentByToUser",
+    "FetchPolicyInformation":"Policy/FetchPolicyInformation"
   }
 }

@@ -1,4 +1,4 @@
-package stepdefinitions;
+package com.qa.mis.stepdefinitions;
 
 import com.qa.mis.commonutils.Utils;
 import io.cucumber.java.en.Given;

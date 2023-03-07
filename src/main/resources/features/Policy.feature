@@ -1,3 +1,6 @@
+#Author: charu.garg@geminisolutions.com
+#Keyword: Policy
+
 Feature: MIS Portal API Login Authentication
 
   Scenario Outline: API VALIDATION: Login
@@ -20,4 +23,11 @@ Feature: MIS Portal API Login Authentication
     Examples:
       | endpoint             | method | expectedStatus | sampleName           |
       | GetAllActivePolicies | post   | 200            | getAllActivePolicies |
+
+  Scenario Outline: API VALIDATION: GetAllActivePolicies
+    Given Set the Policy endpoint "<endpoint>" , method "<method>" and "<sampleName>"
+    Then Verify status code <expectedStatus>
+    Examples:
+      | endpoint               | method | expectedStatus | sampleName             |
+      | FetchPolicyInformation | post   | 200            | fetchPolicyInformation |
 
