@@ -8,7 +8,7 @@
   "glueCode": "com.qa.mis.stepdefinitions",
   "jewelEntryUrl": "https://apis.gemecosystem.com/enter-point",
   "reportLocation": "/tmp",
-  "emailReport": "N",
+  "emailReport": "J",
   "emailTO": "tushar.chauhan@geminisolutions.com",
   "emailCC": "charu.garg@geminisolutions.com",
   "beta": {
@@ -69,6 +69,7 @@
     "GetDocumentByGroupId": "KnowledgeBase/GetDocumentByGroupId",
     "GetDocumentGroupsByParentId": "KnowledgeBase/GetDocumentGroupsByParentId",
     "GetAllDocumentTags": "KnowledgeBase/GetAllDocumentTags",
-    "GetSharedDocumentByToUser":"KnowledgeBase/GetSharedDocumentByToUser"
+    "GetSharedDocumentByToUser":"KnowledgeBase/GetSharedDocumentByToUser",
+    "FetchPolicyInformation":"Policy/FetchPolicyInformation"
   }
 }
