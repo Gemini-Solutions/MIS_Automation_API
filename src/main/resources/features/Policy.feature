@@ -1,6 +1,5 @@
 #Author: charu.garg@geminisolutions.com
 #Keyword: Policy
-
 Feature: MIS Portal API Login Authentication
 
   Scenario Outline: API VALIDATION: Login
@@ -30,4 +29,3 @@ Feature: MIS Portal API Login Authentication
     Examples:
       | endpoint               | method | expectedStatus | payloadName             |
       | FetchPolicyInformation | post   | 200            | fetchPolicyInformation |
-
