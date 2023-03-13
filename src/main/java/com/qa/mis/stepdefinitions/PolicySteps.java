@@ -30,12 +30,12 @@ public class PolicySteps {
     }
 
     @Given("^Set the Policy endpoint \"(.*)\" , method \"(.*)\" and \"(.*)\"$")
-    public void hitApiWithPayload(String url, String method,String sampleName) throws Exception {
+    public void hitApiWithPayload(String url, String method,String payloadName) throws Exception {
         HashMap<String,String> token=new HashMap<String,String>();
         System.out.println(Utils.GetToken());
         token.put("Authorization", Utils.GetAuthorization());
         token.put("UserAbrhs",Utils.GetUser());
         token.put("Token",Utils.GetToken());
-        status = Utils.APIwithPayloads(url, method,sampleName,token,"").getStatus();
+        status = Utils.APIwithPayloads(url, method,payloadName,token,"").getStatus();
     }
 }

@@ -18,16 +18,16 @@ Feature: MIS Portal API Login Authentication
       | FetchDataForEmployeeDirectory | get    | 200            |
 
   Scenario Outline: API VALIDATION: GetAllActivePolicies
-    Given Set the Policy endpoint "<endpoint>" , method "<method>" and "<sampleName>"
+    Given Set the Policy endpoint "<endpoint>" , method "<method>" and "<payloadName>"
     Then Verify Policy status code <expectedStatus>
     Examples:
-      | endpoint             | method | expectedStatus | sampleName           |
+      | endpoint             | method | expectedStatus | payloadName           |
       | GetAllActivePolicies | post   | 200            | getAllActivePolicies |
 
   Scenario Outline: API VALIDATION: GetAllActivePolicies
-    Given Set the Policy endpoint "<endpoint>" , method "<method>" and "<sampleName>"
+    Given Set the Policy endpoint "<endpoint>" , method "<method>" and "<payloadName>"
     Then Verify status code <expectedStatus>
     Examples:
-      | endpoint               | method | expectedStatus | sampleName             |
+      | endpoint               | method | expectedStatus | payloadName             |
       | FetchPolicyInformation | post   | 200            | fetchPolicyInformation |
 

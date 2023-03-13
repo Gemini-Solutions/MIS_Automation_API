@@ -11,10 +11,10 @@ Feature: Reimbursement Api
       | postApi  | post   | 200            |
 
   Scenario Outline: API VALIDATION: GetReimbursementListToView
-    Given Set the Reimbursement endpoint "<endpoint>" , method "<method>" and "<sampleName>"
+    Given Set the Reimbursement endpoint "<endpoint>" , method "<method>" and "<payloadName>"
     Then Verify Reimbursement status code <expectedStatus>
     Examples:
-      | endpoint                   | method | expectedStatus | sampleName                 |
+      | endpoint                   | method | expectedStatus | payloadName                 |
       | GetReimbursementListToView | post   | 200            | getReimbursementListToView |
 
   Scenario Outline: API VALIDATION: GetReimbursementType
