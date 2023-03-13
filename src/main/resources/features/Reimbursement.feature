@@ -12,7 +12,7 @@ Feature: Reimbursement Api
     Given Set the Reimbursement endpoint "<endpoint>" , method "<method>" and "<payloadName>"
     Then Verify Reimbursement status code <expectedStatus>
     Examples:
-      | endpoint                   | method | expectedStatus | payloadName                 |
+      | endpoint                   | method | expectedStatus | payloadName                |
       | GetReimbursementListToView | post   | 200            | getReimbursementListToView |
 
   Scenario Outline: API VALIDATION: GetReimbursementType

@@ -3,7 +3,7 @@
 
 Feature: MIS Portal API Login Authentication
 
- Background: API VALIDATION: Login
+  Background: API VALIDATION: Login
     Given Set endpoint "postApi" and method "post"
     Then Verify Policy status code 200
 
@@ -18,13 +18,13 @@ Feature: MIS Portal API Login Authentication
     Given Set the Policy endpoint "<endpoint>" , method "<method>" and "<payloadName>"
     Then Verify Policy status code <expectedStatus>
     Examples:
-      | endpoint             | method | expectedStatus | payloadName           |
+      | endpoint             | method | expectedStatus | payloadName          |
       | GetAllActivePolicies | post   | 200            | getAllActivePolicies |
 
   Scenario Outline: API VALIDATION: GetAllActivePolicies
     Given Set the Policy endpoint "<endpoint>" , method "<method>" and "<payloadName>"
     Then Verify Policy status code <expectedStatus>
     Examples:
-      | endpoint               | method | expectedStatus | payloadName             |
+      | endpoint               | method | expectedStatus | payloadName            |
       | FetchPolicyInformation | post   | 200            | fetchPolicyInformation |
 
