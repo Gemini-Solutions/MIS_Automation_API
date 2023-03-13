@@ -5,7 +5,7 @@ Feature: Reimbursement Api
 
   Scenario Outline: API VALIDATION: Login
     Given Set endpoint "<endpoint>" and method "<method>"
-    Then Verify status code <expectedStatus>
+    Then Verify Policy status code <expectedStatus>
     Examples:
       | endpoint | method | expectedStatus |
       | postApi  | post   | 200            |

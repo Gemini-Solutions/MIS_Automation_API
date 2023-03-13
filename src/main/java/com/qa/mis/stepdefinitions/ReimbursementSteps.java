@@ -28,7 +28,7 @@ public class ReimbursementSteps {
     }
 
     @Then("^Verify Reimbursement status code (.*)$")
-    public void verifyReimbursementStatusCodeExpectedStatus(int Expected) {
+    public void verifyReimbursementstatuscode(int Expected) {
         Utils.VerifyStatusCode(Expected, status);
     }
 }

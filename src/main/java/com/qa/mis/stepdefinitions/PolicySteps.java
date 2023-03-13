@@ -15,7 +15,7 @@ public class PolicySteps {
         status = Utils.LoginUser(url, method,token,"Login User").getStatus();
     }
 
-    @Then("^Verify status code (.+)$")
+    @Then("^Verify Policy status code (.+)$")
     public void check_status_code(int Expected) {
         Utils.VerifyStatusCode(Expected, status);
     }
