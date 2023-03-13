@@ -3,12 +3,10 @@
 
 Feature: KnowledgeBase Api
 
-#  Scenario Outline: API VALIDATION: Login
-#    Given Set endpoint "<endpoint>" and method "<method>"
-#    Then Verify KnowledgeBase status code <expectedStatus>
-#    Examples:
-#      | endpoint | method | expectedStatus |
-#      | postApi  | post   | 200            |
+  Background: API VALIDATION: Login
+    Given Set endpoint "postApi" and method "post"
+    Then Verify Policy status code 200
+
 
   Scenario Outline: API VALIDATION: GetDocumentByGroupId
     Given Set the KnowledgeBase endpoint "<endpoint>" , method "<method>" and "<payloadName>"

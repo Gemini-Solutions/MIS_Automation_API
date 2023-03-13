@@ -15,8 +15,8 @@ public class PolicySteps {
         status = Utils.LoginUser(url, method,token,"Login User").getStatus();
     }
 
-    @Then("^Verify Policy status code (.+)$")
-    public void check_status_code(int Expected) {
+    @Then("Verify Policy status code {int}")
+    public void check_status_code(Integer Expected) {
         Utils.VerifyStatusCode(Expected, status);
     }
     @Given("^Set the Policy endpoint \"(.*)\" and method \"(.*)\"$")
