@@ -19,15 +19,21 @@ public class Utils {
     public static String GetAuthorization() {
         return GlobalVariable.authorization;
     }
-    public static String GetUser(){
+
+    public static String GetUser() {
         return GlobalVariable.user;
+    }
+
+    public static String APIcalling(){
+        String commonAPI="https://mymisapi.geminisolutions.com/api/";
+        return commonAPI;
     }
 
     public static Response LoginUser(String UrlNameFromConfig, String method, Map<String, String> headers, String step) throws Exception {
         Response response = new Response();
         try {
             Request request = new Request();
-            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            String url = APIcalling()+ProjectConfigData.getProperty(UrlNameFromConfig);
             GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
             request.setURL(url);
             request.setMethod(method);
@@ -39,9 +45,8 @@ public class Utils {
             }
 
             response = ApiInvocation.handleRequest(request);
-            if(response.getStatus()== HttpStatus.SC_OK)
-            {
-                GlobalVariable.token=response.getResponseBodyJson().getAsJsonObject().get("Token").getAsString();
+            if (response.getStatus() == HttpStatus.SC_OK) {
+                GlobalVariable.token = response.getResponseBodyJson().getAsJsonObject().get("Token").getAsString();
             }
 //            GemTestReporter.addTestStep(method.toUpperCase() + " Request Verification ", method.toUpperCase() + " Request Executed Successfully", STATUS.PASS);
             GemTestReporter.addTestStep("Response Message", response.getResponseMessage(), STATUS.INFO);
@@ -61,7 +66,7 @@ public class Utils {
         Response response = new Response();
         try {
             Request request = new Request();
-            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            String url = APIcalling()+ProjectConfigData.getProperty(UrlNameFromConfig);
             GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
             request.setURL(url);
             request.setMethod(method);
@@ -99,7 +104,7 @@ public class Utils {
         Response response = new Response();
         try {
             Request request = new Request();
-            String url = ProjectConfigData.getProperty(UrlNameFromConfig);
+            String url = APIcalling()+ProjectConfigData.getProperty(UrlNameFromConfig);
             GemTestReporter.addTestStep("Url for " + method.toUpperCase() + " Request", url, STATUS.INFO);
             request.setURL(url);
             request.setMethod(method);
