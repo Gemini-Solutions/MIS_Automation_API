@@ -29,3 +29,24 @@ Feature: Reimbursement Api
       | endpoint                                  | method | expectedStatus |
       | GetReimbursementMonthYearToViewAndApprove | post   | 200            |
 
+  Scenario Outline:API VALIDATION: GetReimbursementListToViewInvalid Header
+    When Set the Reimbursement endpoint "<endpoint>" , method "<method>" and "<payloadName>" for invalid
+    Then Verify Reimbursement status code <expectedStatus>
+    Examples:
+      | endpoint                   | method | expectedStatus | payloadName                |
+      | GetReimbursementListToView | post   | 401            | getReimbursementListToView |
+
+  Scenario Outline: API VALIDATION: GetReimbursementListToView Negative Scenario
+    Given Set the Reimbursement endpoint "<endpoint>" , method "<method>" and "<payloadName>"
+    Then Verify Reimbursement status code <expectedStatus>
+    Examples:
+      | endpoint                   | method | expectedStatus | payloadName                   |
+      | GetReimbursementListToView | post   | 400            | getReimbursementListToViewNeg |
+
+  Scenario Outline: API VALIDATION: GetReimbursementListToView Invalid Header
+    Given Set the Reimbursement endpoint "<endpoint>" , method "<method>" and "<payloadName>"
+    Then Verify Reimbursement status code <expectedStatus>
+    Examples:
+      | endpoint                   | method | expectedStatus | payloadName                |
+      | GetReimbursementListToView | post   | 405            | getReimbursementListToView |
+
