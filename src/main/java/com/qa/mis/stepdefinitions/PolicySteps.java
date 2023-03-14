@@ -3,6 +3,7 @@ package com.qa.mis.stepdefinitions;
 import com.qa.mis.commonutils.Utils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import java.util.HashMap;
 
@@ -39,5 +40,15 @@ public class PolicySteps {
         token.put("UserAbrhs", Utils.GetUser());
         token.put("Token", Utils.GetToken());
         status = Utils.APIwithPayloads(url, method, payloadName, token, "").getStatus();
+    }
+
+    @When("Set the Policy endpoint {string} , method {string} and {string} for invalid")
+    public void setThePolicyEndpointMethodAndForInvalid(String url, String method, String payloadName) {
+        HashMap<String, String> token = new HashMap<String, String>();
+        try {
+            status = Utils.APIwithPayloads(url, method, payloadName, token, "").getStatus();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
